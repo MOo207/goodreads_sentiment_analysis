@@ -1,0 +1,44 @@
+
+    DATA PROCESSING PIPELINE FLOWCHART
+    ================================
+    
+    1. Data Collection
+       |
+       ├── Load 88 CSV files from dataset
+       └── Combine into unified dataframe
+    
+    2. Data Preprocessing
+       |
+       ├── Remove rows with missing reviews/ratings
+       ├── Convert ratings to numeric values
+       ├── Clean text data (remove punctuation, numbers)
+       ├── Tokenize text
+       ├── Remove stopwords
+       └── Apply stemming
+    
+    3. Data Preparation
+       |
+       ├── Split data into train/test sets
+       ├── Encode labels (ratings 1-5)
+       ├── Prepare features using:
+       |   ├── Bag of Words
+       |   ├── TF-IDF
+       |   └── Sequences for RNN
+       └── Normalize data where needed
+    
+    4. Model Training & Evaluation
+       |
+       ├── Train multiple classifiers:
+       |   ├── Naive Bayes
+       |   ├── Logistic Regression
+       |   ├── SVM
+       |   └── RNN (LSTM/SimpleRNN)
+       ├── Evaluate with accuracy, precision, recall
+       └── Compare model performance
+    
+    5. Results Analysis
+       |
+       ├── Select best performing model
+       ├── Generate classification reports
+       └── Create visualizations
+    

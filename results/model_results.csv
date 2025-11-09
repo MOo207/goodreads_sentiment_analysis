@@ -1,0 +1,9 @@
+Model,Accuracy
+Multinomial Naive Bayes (BOW),0.6667
+Logistic Regression (BOW),0.7432
+SVM (BOW),0.6776
+Multinomial Naive Bayes (TF-IDF),0.6858
+Logistic Regression (TF-IDF),0.7568
+SVM (TF-IDF),0.7650
+LSTM RNN,0.7240
+SimpleRNN,0.6858

@@ -1,0 +1,30 @@
+METHODOLOGY DESCRIPTION
+=====================
+
+1. DATA PREPROCESSING
+   - Language filtering: Only English reviews are retained
+   - Text cleaning: Removal of punctuation, numbers, and special characters
+   - Tokenization: Breaking text into individual words
+   - Stopword removal: Common words that don't contribute to sentiment
+   - Stemming/Lemmatization: Reducing words to their root forms
+   - Negation handling: Preserving sentiment context in negated phrases
+
+2. SENTIMENT CLASSIFICATION
+   - Converting 5-star ratings to 3 sentiment categories:
+     * 1-2 stars: Negative sentiment
+     * 3 stars: Neutral sentiment
+     * 4-5 stars: Positive sentiment
+
+3. FEATURE EXTRACTION
+   - Bag of Words (BOW): Traditional word count approach
+   - TF-IDF: Term frequency-inverse document frequency for word importance
+   - Sequential features: For deep learning models
+
+4. MODEL TRAINING
+   - Traditional ML models: Naive Bayes, Logistic Regression, SVM
+   - Deep Learning models: LSTM and SimpleRNN for sequence modeling
+   - Cross-validation: Ensuring robust model evaluation
+
+5. MODEL EVALUATION
+   - Accuracy metrics for comparing different approaches
+   - Performance analysis explaining why some models work better

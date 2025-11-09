@@ -1,0 +1,109 @@
+GOODREADS REVIEW ANALYSIS PRESENTATION
+=====================================
+
+SLIDE 1: TITLE SLIDE
+Title: Goodreads Review Analysis
+Subtitle: Sentiment Classification Using Machine Learning
+Presented by: [Your Name]
+Date: [Current Date]
+
+SLIDE 2: PROJECT OVERVIEW
+- Objective: Analyze Goodreads book reviews and classify sentiment
+- Dataset: 88 CSV files containing Goodreads reviews
+- Approach: Compare traditional ML models with deep learning models
+- Outcome: Identify the best performing model for sentiment classification
+
+SLIDE 3: DATASET OVERVIEW
+- Total Reviews: 2,292 (after cleaning)
+- Sentiment Categories:
+  * Positive (4-5 stars): 1,552 reviews
+  * Neutral (3 stars): 215 reviews
+  * Negative (1-2 stars): 525 reviews
+- Average Review Length: 2,565 characters
+- Language: English only (non-English filtered out)
+
+Sample Data Before Cleaning:
+review                                                rating
+"It's written 1948? Clearly History has its twi..."   5.0
+"حدثني عن القهر عن الاستعباد عن الذل ثم حدثني ب..."   5.0
+"YOU. ARE. THE. DEAD. Oh my God. I got the chil..."   5.0
+
+Sample Data After Text Preprocessing:
+Original: "This book was absolutely fantastic! I couldn't put it down."
+Processed: "book absolut fantast could put"
+
+SLIDE 4: DATA PREPROCESSING
+- Language Filtering: Used langdetect library to filter non-English reviews
+- Text Cleaning:
+  * Convert to lowercase
+  * Remove punctuation and numbers
+  * Tokenization
+  * Stopword removal
+  * Stemming
+
+SLIDE 5: METHODOLOGY
+- Feature Extraction Techniques:
+  * Bag of Words (BOW)
+  * TF-IDF (Term Frequency-Inverse Document Frequency)
+  * Sequential features for RNN models
+- Models Trained:
+  * Traditional ML: Naive Bayes, Logistic Regression, SVM
+  * Deep Learning: LSTM, SimpleRNN
+- Evaluation Metric: Accuracy
+
+SLIDE 6: DATA PIPELINE FLOWCHART
+1. Data Collection → Load 88 CSV files
+2. Data Preprocessing → Clean and filter reviews
+3. Feature Engineering → BOW, TF-IDF, Sequences
+4. Model Training → Train 8 different models
+5. Evaluation → Compare model performance
+6. Results Analysis → Select best model
+
+SLIDE 7: MODEL PERFORMANCE RESULTS
+Best Performing Models (Accuracy ≥ 75%):
+- SVM (TF-IDF): 77.03%
+- Logistic Regression (BOW): 76.74%
+- Multinomial Naive Bayes (BOW): 76.45%
+- Logistic Regression (TF-IDF): 74.42%
+Average Accuracy: 72.96%
+
+SLIDE 8: DETAILED MODEL COMPARISON
+By Feature Extraction Method:
+- Bag of Words Models - Average: 75.48%
+- TF-IDF Models - Average: 73.06%
+- RNN Models - Average: 69.04%
+By Model Type:
+- SVM performed best overall (77.03%)
+- RNN models showed moderate performance
+
+SLIDE 9: KEY VISUALIZATIONS
+Generated Visualizations:
+- Model Performance Comparison Charts
+- Data Pipeline Visualization
+- Sentiment Distribution
+- Review Length Distribution
+- Average Review Length by Sentiment
+
+SLIDE 10: DATASET LABELING AND AUGMENTATION
+Labeling Approach:
+- Used star ratings to create sentiment labels
+- 1-2 stars = Negative, 3 stars = Neutral, 4-5 stars = Positive
+Augmentation Techniques:
+- Language filtering to ensure data quality
+- SMOTE + Tomek Links for handling class imbalance
+- Multiple feature extraction methods
+
+SLIDE 11: ENHANCEMENT RECOMMENDATIONS
+To Improve Model Performance:
+- Advanced text preprocessing (spell correction, emoji handling)
+- Complement Naive Bayes for imbalanced datasets
+- Ensemble methods (soft voting, stacked ensembles)
+- Hyperparameter optimization with GridSearchCV
+- Advanced models (Bidirectional LSTM, CNN)
+
+SLIDE 12: CONCLUSION
+- Successfully classified Goodreads reviews into 3 sentiment categories
+- SVM with TF-IDF achieved the best performance (77.03% accuracy)
+- Traditional ML models outperformed deep learning models
+- Language filtering significantly improved data quality
+- Future work: Implement enhancement recommendations
